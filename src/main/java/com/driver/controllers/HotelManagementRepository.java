@@ -51,8 +51,8 @@ public class HotelManagementRepository {
     public int bookARoom(Booking booking) {
         int bookingPersonAadhaar = booking.getBookingAadharCard();
         String bookingHotelName = booking.getHotelName();
-        if(!hotelDb.containsKey(bookingHotelName) || !userDb.containsKey(bookingPersonAadhaar))
-            return -1;
+//        if(!hotelDb.containsKey(bookingHotelName) || !userDb.containsKey(bookingPersonAadhaar))
+//            return -1;
         if(hotelDb.get(bookingHotelName).getAvailableRooms() < booking.getNoOfRooms())
             return -1;
 
